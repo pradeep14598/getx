@@ -64,25 +64,25 @@ class GetBuilder<T extends GetxController> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Binder(
-      init: init == null ? null : () => init!,
-      global: global,
-      autoRemove: autoRemove,
-      assignId: assignId,
-      initState: initState,
-      filter: filter,
-      tag: tag,
-      dispose: dispose,
-      id: id,
-      lazy: false,
-      didChangeDependencies: didChangeDependencies,
-      didUpdateWidget: didUpdateWidget,
-      child: Builder(builder: (context) {
-        final controller = Bind.of<T>(context, rebuild: true);
-        return builder(controller);
-      }),
-    );
-    // return widget.builder(controller!);
+//     return Binder(
+//       init: init == null ? null : () => init!,
+//       global: global,
+//       autoRemove: autoRemove,
+//       assignId: assignId,
+//       initState: initState,
+//       filter: filter,
+//       tag: tag,
+//       dispose: dispose,
+//       id: id,
+//       lazy: false,
+//       didChangeDependencies: didChangeDependencies,
+//       didUpdateWidget: didUpdateWidget,
+//       child: Builder(builder: (context) {
+//         final controller = Bind.of<T>(context, rebuild: true);
+//         return builder(controller);
+//       }),
+//     );
+  return widget.builder(controller!);
   }
 }
 
