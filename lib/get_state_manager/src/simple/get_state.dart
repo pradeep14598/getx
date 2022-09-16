@@ -82,7 +82,7 @@ class GetBuilder<T extends GetxController> extends StatelessWidget {
 //         return builder(controller);
 //       }),
 //     );
-  return widget.builder(controller!);
+  return builder(controller!);
   }
 }
 
